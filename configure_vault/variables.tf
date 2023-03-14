@@ -3,6 +3,12 @@ variable "vault_cluster_id" {
   description = "(Required) ID for Vault Cluster created in HCP"
 }
 
+variable "hcp_hvn_id" {
+  type = string
+  description = "Name for HVN (HashiCorp Virtual Network)"
+  default = "hvn"
+}
+
 variable "vault_cluster_tier" {
   type        = string
   description = "(Optional) Tier for Vault Cluster created in HCP. Defaults to dev."

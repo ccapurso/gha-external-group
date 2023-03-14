@@ -2,7 +2,7 @@ terraform {
   required_providers {
     hcp = {
       source  = "hashicorp/hcp"
-      version = ">=0.41.0"
+      # version = ">=0.41.0"
     }
   }
 
@@ -10,7 +10,7 @@ terraform {
     organization = "brightblueray"
 
     workspaces {
-      name = "oidc-vault-cluster"
+      name = "demo-vault-cluster"
     }
   }
 }

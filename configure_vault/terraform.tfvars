@@ -1,1 +1,1 @@
-vault_cluster_id = "gha-demo"
+vault_cluster_id = "demo-vault"
