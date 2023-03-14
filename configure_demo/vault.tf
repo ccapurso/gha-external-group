@@ -83,5 +83,8 @@ resource "vault_policy" "ci-secret-reader" {
 path "${vault_kv_secret_v2.ci.path}" {
   capabilities = ["list","read"]
 }
+path "kv/*" {
+  capabilities = ["list","read"]
+}
 EOT
 }

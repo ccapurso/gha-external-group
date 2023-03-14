@@ -11,7 +11,7 @@ resource "vault_identity_group" "group" {
 
 # Associate External Group to GitHub Team
 resource "vault_identity_group_alias" "group-alias" {
-  name           = "ryjewski_nationwide_test"
+  name           = "ryjewski_github_actions_demo"
   mount_accessor = vault_github_auth_backend.github_auth.accessor
   canonical_id   = vault_identity_group.group.id
 }
@@ -35,4 +35,20 @@ resource "vault_identity_entity_alias" "rryjewski_jwt" {
 
 resource "vault_identity_entity" "bmiller" {
   name = "brandon.miller"
+}
+
+resource "vault_identity_entity" "dahlke" {
+  name = "neil.dahlke"
+}
+
+resource "vault_identity_entity_alias" "dahlke_gh" {
+  name = "dahlke"
+  canonical_id = vault_identity_entity.dahlke.id
+  mount_accessor = vault_github_auth_backend.github_auth.accessor
+}
+
+resource "vault_identity_entity_alias" "dahlke_jwt" {
+  name = "dahlke"
+  canonical_id = vault_identity_entity.dahlke.id
+  mount_accessor = vault_jwt_auth_backend.jwt.accessor
 }
