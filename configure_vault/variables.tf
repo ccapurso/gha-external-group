@@ -4,9 +4,9 @@ variable "vault_cluster_id" {
 }
 
 variable "hcp_hvn_id" {
-  type = string
+  type        = string
   description = "Name for HVN (HashiCorp Virtual Network)"
-  default = "hvn"
+  default     = "hvn"
 }
 
 variable "vault_cluster_tier" {

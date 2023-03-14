@@ -1,5 +1,5 @@
 provider "vault" {
-  address = var.vault_server_url
+  address   = var.vault_server_url
   namespace = var.vault_namespace
 }
 
@@ -69,7 +69,7 @@ resource "vault_kv_secret_v2" "ci" {
   name  = "ci"
   data_json = jsonencode(
     {
-      app_user = "${var.docker_user}",
+      app_user   = "${var.docker_user}",
       app_secret = "${var.docker_pat}"
     }
   )
