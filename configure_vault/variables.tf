@@ -26,3 +26,5 @@ variable "min_vault_version" {
   description = "(Optional) Minimum version of Vault to run in the cluster. Defaults to null."
   default     = null
 }
+
+variable "vault_license" {}

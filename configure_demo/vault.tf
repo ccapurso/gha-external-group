@@ -1,5 +1,6 @@
 provider "vault" {
   address = var.vault_server_url
+  namespace = var.vault_namespace
 }
 
 # Create a KV secrets engine
@@ -49,7 +50,7 @@ resource "vault_jwt_auth_backend_role" "example" {
   token_max_ttl     = "100"
   bound_audiences   = ["https://github.com/${var.github_organization}"]
   bound_claims_type = "string"
-  bound_subject     = "repo:${var.github_organization}/${var.github_repository}:ref:refs/heads/main"
+  bound_subject     = "repo:${var.github_user}/${var.github_repository}:ref:refs/heads/main"
   user_claim        = "actor"
   role_type         = "jwt"
 }

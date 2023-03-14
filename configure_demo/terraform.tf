@@ -12,10 +12,11 @@ terraform {
   }
 
   cloud {
+    # TFC Organization
     organization = "brightblueray"
 
     workspaces {
-      name = "oidc-github-demo"
+      name = "github-actions-demo"
     }
   }
 }
