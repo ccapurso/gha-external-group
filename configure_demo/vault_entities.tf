@@ -11,7 +11,7 @@ resource "vault_identity_group" "group" {
 
 # Associate External Group to GitHub Team
 resource "vault_identity_group_alias" "group-alias" {
-  name           = "team-se"
+  name           = "ryjewski_nationwide_test"
   mount_accessor = vault_github_auth_backend.github_auth.accessor
   canonical_id   = vault_identity_group.group.id
 }
