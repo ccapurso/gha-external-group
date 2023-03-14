@@ -48,7 +48,7 @@ resource "vault_jwt_auth_backend_role" "example" {
   role_name         = "github-actions-role"
   token_policies    = [vault_policy.taco.name]
   token_max_ttl     = "100"
-  bound_audiences   = ["https://github.com/${var.github_organization}"]
+  bound_audiences   = ["https://github.com/${var.github_user}"]
   bound_claims_type = "string"
   bound_subject     = "repo:${var.github_user}/${var.github_repository}:ref:refs/heads/main"
   user_claim        = "actor"
