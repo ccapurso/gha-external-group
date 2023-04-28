@@ -1,7 +1,7 @@
 variable "vault_server_url" {
   type        = string
   description = "(Required) The URL of the Vault server"
-  default     = "https://demo-vault-public-vault-611b2e54.b5c74a97.z1.hashicorp.cloud:8200"
+  default     = "https://demo-vault-public-vault-17390d3a.55ddbf57.z1.hashicorp.cloud:8200"
 }
 
 variable "vault_namespace" {
