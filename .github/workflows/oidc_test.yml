@@ -29,7 +29,7 @@ jobs:
           curl -sSLf -X POST -H "Content-Type: application/json" -H "X-Vault-Namespace: admin" --data @token.json $VAULT_URL/v1/auth/$VAULT_AUTH_PATH/login
 
           # Remove the token file when we're done (if we don't fail)
-          rm ./token.json
+          #rm ./token.json
       env:
         VAULT_URL: ${{ secrets.VAULT_ADDR }}
         VAULT_AUTH_PATH: jwt
