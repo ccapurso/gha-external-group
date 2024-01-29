@@ -50,7 +50,7 @@ resource "vault_jwt_auth_backend_role" "example" {
   token_max_ttl     = "100"
   bound_audiences   = ["https://github.com/${var.github_user}"]
   bound_claims_type = "string"
-  bound_subject     = "repo:${var.github_user}/${var.github_repository}:ref:refs/heads/main"
+  bound_subject     = "repo:${var.github_user}/${var.github_repository}:ref:refs/heads/ccapurso/self-hosted-runner"
   user_claim        = "actor"
   role_type         = "jwt"
 }
