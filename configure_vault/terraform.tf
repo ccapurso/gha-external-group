@@ -5,13 +5,5 @@ terraform {
       # version = ">=0.41.0"
     }
   }
-
-  cloud {
-    organization = "brightblueray"
-
-    workspaces {
-      name = "demo-vault-cluster"
-    }
-  }
 }
 

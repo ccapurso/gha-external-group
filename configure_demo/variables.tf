@@ -1,7 +1,7 @@
 variable "vault_server_url" {
   type        = string
   description = "(Required) The URL of the Vault server"
-  default     = "https://demo-vault-public-vault-17390d3a.55ddbf57.z1.hashicorp.cloud:8200"
+  default     = ""
 }
 
 variable "vault_namespace" {
@@ -25,7 +25,7 @@ variable "github_repository" {
 variable "github_user" {
   type        = string
   description = "(Required) The GitHub organization or username for the JWT authentication role."
-  default     = "brightblueray"
+  default     = "ccapurso"
 }
 
 variable "docker_pat" {
@@ -36,5 +36,5 @@ variable "docker_pat" {
 variable "docker_user" {
   type        = string
   description = "(Required) User for Docker Hub"
-  default     = "ryjewski"
+  default     = "ccapurso"
 }
