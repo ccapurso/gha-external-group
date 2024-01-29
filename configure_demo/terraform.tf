@@ -10,14 +10,5 @@ terraform {
       # version = "~> 4.0"
     }
   }
-
-  cloud {
-    # TFC Organization
-    organization = "brightblueray"
-
-    workspaces {
-      name = "github-actions-demo"
-    }
-  }
 }
 

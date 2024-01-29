@@ -11,30 +11,26 @@ resource "vault_identity_group" "group" {
 
 # Associate External Group to GitHub Team
 resource "vault_identity_group_alias" "group-alias" {
-  name           = "ryjewski_github_actions_demo"
+  name           = "ccapurso_github_actions_demo"
   mount_accessor = vault_github_auth_backend.github_auth.accessor
   canonical_id   = vault_identity_group.group.id
 }
 
 # Configure Entities
-resource "vault_identity_entity" "rryjewski" {
-  name = "rryjewski"
+resource "vault_identity_entity" "ccapurso" {
+  name = "ccapurso"
 }
 
-resource "vault_identity_entity_alias" "rryjewski_gh" {
-  name = "brightblueray"
-  canonical_id = vault_identity_entity.rryjewski.id
+resource "vault_identity_entity_alias" "ccapurso_gh" {
+  name = "ccapurso"
+  canonical_id = vault_identity_entity.ccapurso.id
   mount_accessor = vault_github_auth_backend.github_auth.accessor
 }
 
-resource "vault_identity_entity_alias" "rryjewski_jwt" {
-  name = "brightblueray"
-  canonical_id = vault_identity_entity.rryjewski.id
+resource "vault_identity_entity_alias" "ccapurso_jwt" {
+  name = "ccapurso"
+  canonical_id = vault_identity_entity.ccapurso.id
   mount_accessor = vault_jwt_auth_backend.jwt.accessor
-}
-
-resource "vault_identity_entity" "bmiller" {
-  name = "brandon.miller"
 }
 
 resource "vault_identity_entity" "dahlke" {

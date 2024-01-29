@@ -2,10 +2,10 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/hcp" {
-  version     = "0.55.0"
-  constraints = ">= 0.41.0"
+  version = "0.55.0"
   hashes = [
     "h1:XDIRHAyIEVSp9WNml8MwgqvciaDnZc8lJyCoaEdIKe4=",
+    "h1:yvM7tYqqq+PVeqv+9tDyPjGJJFfVN3nOoLVxvWHzQ4w=",
     "zh:0fa82a384b25a58b65523e0ea4768fa1212b1f5cfc0c9379d31162454fedcc9d",
     "zh:495bd6d48d3b595e4270e390e22d6574850cc5ba95540d572398d42e854eb44c",
     "zh:707772779b8a848495bfead3145d338a5255ab2a901a9a96597d77e41c289c69",
